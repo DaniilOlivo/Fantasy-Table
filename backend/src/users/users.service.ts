@@ -20,7 +20,7 @@ export class UsersService {
     return this.userModel.find();
   }
 
-  findOne(id: number): FindedUser {
+  findOne(id: string): FindedUser {
     return this.userModel.findById(id);
   }
 
@@ -28,11 +28,11 @@ export class UsersService {
     return this.userModel.findOne({username});
   }
 
-  update(id: number, updateUserDto: UpdateUserDto): FindedUser {
+  update(id: string, updateUserDto: UpdateUserDto): FindedUser {
     return this.userModel.findByIdAndUpdate(id, updateUserDto, {new: true});
   }
 
-  remove(id: number): FindedUser {
+  remove(id: string): FindedUser {
     return this.userModel.findByIdAndDelete(id);
   }
 }
