@@ -12,7 +12,6 @@ export default () => {
     let secret = process.env.JWT_SECRET;
     if (!secret) throw new Error('JWT secret is missing');
 
-    console.log(uri);
     return {
         database_uri: uri,
         jwt_secret: secret,
