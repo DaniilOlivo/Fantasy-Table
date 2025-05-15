@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsString, MinLength } from "class-validator";
+import { IsNotEmpty, IsString, MinLength } from 'class-validator';
 
 export class CreateUserDto {
     @IsNotEmpty()
@@ -7,6 +7,6 @@ export class CreateUserDto {
 
     @IsNotEmpty()
     @IsString()
-    @MinLength(6, { message: "Пароль должен содержать минимум 6 символов" })
+    @MinLength(6, { message: 'Пароль должен содержать минимум 6 символов' })
     password: string;
 }

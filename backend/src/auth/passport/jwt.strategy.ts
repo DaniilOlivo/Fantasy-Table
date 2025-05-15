@@ -8,14 +8,14 @@ export type JwtPayload = {
     sub: string;
     username: string;
     role: Role;
-}
+};
 
 @Injectable()
 export class AccessTokenStrategy extends PassportStrategy(Strategy) {
     constructor(private configService: ConfigService) {
         super({
             jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-            secretOrKey: configService.get<string>("jwt_secret")!,
+            secretOrKey: configService.get<string>('jwt_secret')!,
         });
     }
 

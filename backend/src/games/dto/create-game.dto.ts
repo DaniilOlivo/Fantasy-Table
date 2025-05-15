@@ -1,6 +1,14 @@
-import { Type } from "class-transformer";
-import { IsArray, IsBoolean, IsMongoId, IsNotEmpty, IsOptional, IsString, ValidateNested } from "class-validator";
-import { Types } from "mongoose";
+import { Type } from 'class-transformer';
+import {
+    IsArray,
+    IsBoolean,
+    IsMongoId,
+    IsNotEmpty,
+    IsOptional,
+    IsString,
+    ValidateNested,
+} from 'class-validator';
+import { Types } from 'mongoose';
 
 export class CreatePlayerDto {
     @IsNotEmpty()

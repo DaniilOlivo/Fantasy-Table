@@ -2,8 +2,8 @@ declare const process: {
     env: {
         DATABASE_URI: string;
         JWT_SECRET: string;
-    }
-}
+    };
+};
 
 export default () => {
     const uri = process.env.DATABASE_URI;
@@ -18,5 +18,5 @@ export default () => {
         bcrypt: {
             rounds: 10,
         },
-    }
-}
+    };
+};
